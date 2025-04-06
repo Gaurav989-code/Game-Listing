@@ -5,15 +5,15 @@ import Home from "./pages/Home";
 import { TContext } from "./Context/TContext";
 
 function App() {
-  const [theme, setTheme] = useState("dark");
-
-  useEffect(()=>{
-    setTheme(localStorage.getItem('theme')?localStorage.getItem('theme'):'dark')
-  },[])
-
+  const [theme, setTheme] = useState("light");
+  useEffect(() => {
+    setTheme(
+      localStorage.getItem("theme") ? localStorage.getItem("theme") : "dark"
+    );
+  }, []);
   return (
-    <TContext.Provider value={{theme, setTheme}}>
-      <div className={`${theme} ${theme == "dark" ? "bg-[#121212]" : null}`}>
+    <TContext.Provider value={{ theme, setTheme }}>
+      <div className={`${theme} ${theme == "dark" ? "bg-[#121212]" : null} min-h-[100vh]`}>
         <Header />
         <Home />
       </div>

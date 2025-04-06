@@ -1,8 +1,11 @@
-const key = "";
-const axiosCreate = axios.axiosCreate({
-  baseURL: "",
+import axios from "axios";
+
+const key = "d8a1aee37c8d4067ad0ebc8aa104fef0";
+
+const axiosCreate = axios.create({
+  baseURL: "https://api.rawg.io/api",
 });
-const GenreList = axiosCreate.get("/genres?key=" + key);
+const getGenreList = axiosCreate.get("/genres?key=" + key);
 export default {
-  GenreList,
+  getGenreList,
 };
