@@ -11,7 +11,6 @@ function GenreList() {
 
   const getGenreList = () => {
     GlobalApi.getGenreList.then((res) => {
-      console.log(res.data.results);
       setGenreList(res.data.results);
     });
   };
