@@ -37,7 +37,8 @@ function Home() {
           <div>
             <Banner gameBanner={allGameList[0]} />
             <TrendingGames gameList={allGameList} />
-            <GamesByGenreId gamesByGenreListId={gamesByGenreListId} />
+            <GamesByGenreId  gameList={allGameList} />
+            {/* gamesByGenreListId={gamesByGenreListId} */}
           </div>
         ) : null}
       </div>
